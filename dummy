@@ -1,0 +1,33 @@
+// Nodemailer configuration
+// const transporter = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//         user: "sutarimran47@gmail.com", // Your Gmail address
+//         pass: process.env.PASS, // App-specific password from Google
+//     },
+// });
+
+
+// Send mail route
+// app.post("/send-mail", (req, res) => {
+//     const { email } = req.body;
+
+//     const resetLink = `${process.env.LINK}${encodeURIComponent(email)}`;
+
+//     const mailOptions = {
+//         from: "sutarimran47@gmail.com",
+//         to: email,
+//         subject: "Reset your password",
+//         text: `You requested a password reset. Click here to reset your password: ${resetLink}`,
+//     };
+
+//     transporter.sendMail(mailOptions, (error, info) => {
+//         if (error) {
+//             console.log(error);
+//             res.status(500).send("Error sending email: " + error.message);
+//         } else {
+//             console.log("Email sent: " + info.response);
+//             res.send("Reset password email sent successfully!");
+//         }
+//     });
+// });
