@@ -17,15 +17,15 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.use(
   cors({
-    origin: "https://the-tablesprint.netlify.app/", // Allow requests from this origin
-    methods: "GET,POST,PUT,DELETE", // Allowed HTTP methods
-    credentials: true, // Allow cookies and credentials
+    origin: "https://the-tablesprint.netlify.app", // Remove trailing slash
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true,
   })
 );
 
 // Handle preflight requests
 app.options("*", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "https://the-tablesprint.netlify.app/");
+  res.header("Access-Control-Allow-Origin", "https://the-tablesprint.netlify.app");
   res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.send();
