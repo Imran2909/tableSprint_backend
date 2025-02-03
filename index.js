@@ -14,7 +14,10 @@ const app = express();
 // Middleware for parsing requests
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
-app.use(cors({ origin: "*" }));
+app.use(cors({
+  origin: process.env.ORIGIN, 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 
 // Home route
 app.get("/", (req, res) => {
