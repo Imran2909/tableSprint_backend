@@ -25,7 +25,7 @@ app.use(
 
 // Handle preflight requests
 app.options("*", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.header("Access-Control-Allow-Origin", "https://the-tablesprint.netlify.app/");
   res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   res.send();
