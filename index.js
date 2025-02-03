@@ -17,7 +17,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow requests from this origin
+    origin: "https://the-tablesprint.netlify.app/", // Allow requests from this origin
     methods: "GET,POST,PUT,DELETE", // Allowed HTTP methods
     credentials: true, // Allow cookies and credentials
   })
